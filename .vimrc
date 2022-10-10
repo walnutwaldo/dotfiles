@@ -8,6 +8,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'morhetz/gruvbox'
 "Plugin 'ervandew/supertab'
+Plugin 'Konfekt/FastFold'
 "Plugin 'tmhedberg/SimpylFold'
 "Plugin 'cquery-project/cquery'
 "Plugin 'embear/vim-uncrustify'
@@ -65,7 +66,8 @@ nnoremap <leader><space> :nohlsearch<CR>
 set foldenable
 set foldlevelstart=5
 set foldnestmax=10
-set foldmethod=syntax
+autocmd FileType c,cpp,java,js,ts setlocal foldmethod=syntax
+autocmd FileType python setlocal foldmethod=indent
 
 nnoremap <space> za
 
